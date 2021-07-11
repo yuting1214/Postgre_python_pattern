@@ -43,3 +43,34 @@ To create a new table in a PostgreSQL database, you use the following steps:
 - [Code](https://github.com/yuting1214/Postgre_python_pattern/blob/master/code/create_table.md)
 
 ## Insert data into PostgreSQL
+1. First conntect to the database server
+```
+conn = psycopg2.connect(dsn)
+```
+The connect() function returns a new instance of the connection class.
+
+2. Create a new cursor object by calling the cursor() method of the connection object.
+```
+cur = conn.cursor()
+```
+3. You pass the INSERT statement to the first parameter and a list of values to the second parameter of the execute() method.
+```
+cur.execute(sql, (value1,value2))
+```
+4. (Optional) If there is a primary key in table, you can get the generated ID back after inserting the row.
+```
+id = cur.fetchone()[0]
+```
+5. After that, call the commit() method of the connection object to permanently save the changes to the database.
+```
+conn.commit()
+```
+If you forget to call the commit() method, psycopg2 will not make any changes to the table.
+
+6. Finally, close the connection to the PostgreSQL database server by calling the close() method of the cursor and connection objects.
+```
+cur.close()
+conn.close()
+```
+
+- [Code](https://github.com/yuting1214/Postgre_python_pattern/blob/master/code/create_table.md)
