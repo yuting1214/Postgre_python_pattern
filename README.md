@@ -73,4 +73,10 @@ cur.close()
 conn.close()
 ```
 
-- [Code](https://github.com/yuting1214/Postgre_python_pattern/blob/master/code/create_table.md)
+- [Code](https://github.com/yuting1214/Postgre_python_pattern/blob/master/code/insert.md)
+- [Enhance inserting speed](https://hakibenita.com/fast-load-data-python-postgresql)
+
+## Update data in a table
+The mort part of updating procedures are same as **Insert**, except the step 4. 
+
+- [Code](https://github.com/yuting1214/Postgre_python_pattern/blob/master/code/update.md)
