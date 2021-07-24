@@ -80,3 +80,8 @@ conn.close()
 The mort part of updating procedures are same as **Insert**, except the step 4. 
 
 - [Code](https://github.com/yuting1214/Postgre_python_pattern/blob/master/code/update.md)
+
+# Reference
+- [Fastest Way to Load Data Into PostgreSQL Using Python](https://hakibenita.com/fast-load-data-python-postgresql#fetch-the-data)
+- [Naysan Saran](https://naysan.ca/2020/05/09/pandas-to-postgresql-using-psycopg2-bulk-insert-performance-benchmark/)
+
